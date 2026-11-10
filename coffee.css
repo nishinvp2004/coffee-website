@@ -1,0 +1,622 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+nav{
+   background-color: black;
+   padding: 10px 5%;
+}
+.mnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;}
+    a:hover{
+        color: red;
+        cursor: pointer;
+        
+    }
+    
+
+.hero1{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: url(hero1.jpeg)
+}
+.hero2{
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+  
+        /* about section */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 100px 5%;
+    background-color: white;
+}
+.kimg {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.aboutimg {
+    width: 50%;
+}
+.tx {
+    width: 40%;
+}
+
+.tx h1 {
+    font-size: 40px;
+    color: orangered;
+    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+}
+
+.tx p {
+    font-size: 16px; /* 20px → 16px */
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tx .subtitle {
+    font-size: 18px; /* 21px → 18px */
+}
+.abbt {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.abbt:hover {
+    background-color: orangered;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .tx,
+    .aboutimg {
+        width: 100%;
+    }
+
+    .kimg {
+        height: 300px;
+    }
+}
+
+
+    /* gallery section */
+.gr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 5%;
+    gap: 5px;
+    width: 100%;
+    /* height: 100vh; */
+    /* padding: 50px 200px; */
+    background-color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.gr img:hover{
+    transform: scale(1.06);
+    transition: 0.3s;
+    overflow: hidden;
+}
+.gr img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.amm{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 30px;
+    text-align: center;
+}
+
+.gallery1{
+    text-align: center;
+    background-color: white;
+    color: black;
+
+}
+
+.gallerybt{
+    padding: 10px 20px;
+    color: white;
+}
+.glb{
+    padding-bottom: 100px;
+}
+.glb button{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+        /* services section */
+
+
+
+.serimg{
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images-for-grandcoffee-website/services-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+    .ser2{
+        justify-content: center;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+
+    .serv {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.box {
+    background-color: #ff3b3b;
+    color: white;
+    width: 300px;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* mouse pointer box colour change */
+.box:hover {
+    background-color: #ffffff;
+    color: #333333;
+    transform: scale(1.08); /* ഇവിടെ ബോക്സ് വലുതാകുന്നു */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.box p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Read More hidd */
+.read-more-btn {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* mouse (Hover) */
+.box:hover .read-more-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* contact section  */
+
+/* Section Height & Background */
+.custom-testimonial-section {
+  background-color: #ffffff;
+  padding: 80px 0 60px 0; 
+  font-family: Arial, sans-serif;
+  overflow: hidden; 
+}
+
+/* Wide Container for matching image size */
+.custom-container {
+  max-width: 1280px !important; /* Width kooti valithaakki */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Top Heading */
+.main-heading {
+  color: #ff3c00; 
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 10px; 
+  text-align: left;
+}
+
+/* Subtext */
+.sub-heading {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 55px; 
+  text-align: left;
+}
+
+/* Testimonial Box Setup */
+.testimonial-box {
+  position: relative;
+  width: 100%;
+  padding: 30px 45px; /* Ullile space adjust cheythu */
+  margin-bottom: 0; 
+  background: transparent;
+}
+
+/* Top-Left Bracket - Neelam Kooti */
+.testimonial-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px; /* Bracket-nte neelam kooti (Screenshot-le pole) */
+  height: 100%; 
+  border-left: 3px solid #000;
+  border-top: 3px solid #000;
+  pointer-events: none;
+}
+
+/* Bottom-Right Bracket - Neelam Kooti */
+.testimonial-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px; /* Bracket-nte neelam kooti */
+  height: 100%;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  pointer-events: none;
+}
+
+/* Author Name */
+.author-name {
+  color: #ff3c00;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px; 
+  position: relative;
+  z-index: 1; 
+}
+
+/* Paragraph Text */
+.testimonial-text {
+  font-size: 1.05rem;
+  line-height: 1.7; 
+  color: #000;
+  margin-bottom: 0;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dots Positioning */
+.dots-wrapper {
+  margin-top: 60px; 
+  height: 30px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-dots {
+  position: static !important; 
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-dots li {
+  width: 45px !important;
+  height: 12px !important;
+  background-color: #808080 !important; 
+  border-radius: 20px !important;
+  border: none !important;
+  margin: 0 6px !important; 
+  opacity: 1 !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-dots li.active {
+  background-color: #ff3c00 !important; 
+}
+
+/* Contact Us Heading */
+.contact-heading {
+  color: #ff3c00;
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 50px; 
+  margin-bottom: 0; 
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .custom-container {
+    max-width: 100% !important;
+  }
+  .custom-testimonial-section {
+    padding: 50px 0 40px 0;
+  }
+  .main-heading, .contact-heading {
+    font-size: 2.2rem;
+  }
+  .testimonial-box {
+    padding: 20px;
+  }
+  .testimonial-box::before, .testimonial-box::after {
+    width: 60px; /* Phone-il bracket cheruthaakkan */
+  }
+}
+
+
+
+/* contant form section */
+
+/* ========================================= */
+/* CONTACT FORM & MAP CSS (Custom Flexbox)   */
+/* ========================================= */
+
+/* Main Container - Left & Right Split */
+.contact-split-section {
+  display: flex; 
+  width: 100%;
+  height: 550px; /* Exact height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 50% Width for both sides */
+.split-half {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Left Side (Background Image & Form) */
+.left-form-side {
+  /* Ividathe URL maatti ningalude coffee image-nte link kodukkuka */
+  background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(60, 40, 30, 0.75); /* Dark overlay */
+  background-blend-mode: overlay;
+  
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+}
+
+/* Form Container */
+.form-wrapper {
+  width: 100%;
+  max-width: 650px; 
+  padding: 0 40px;
+}
+
+/* Pill Shaped Inputs */
+.pill-input {
+  width: 100%;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50px; /* Oval shape */
+  padding: 18px 25px;
+  font-size: 1.1rem;
+  border: none;
+  margin-bottom: 22px; 
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Message Box (Slightly larger padding at bottom) */
+.message-input {
+  padding-bottom: 30px; 
+}
+
+/* Submit Button Centering */
+.submit-btn-wrapper {
+  display: flex;
+  justify-content: center; 
+  margin-top: 15px;
+}
+
+/* Submit Button Style */
+.pill-submit-btn {
+  background-color: #a32a2a; /* Maroon / Dark Red */
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 12px 50px;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pill-submit-btn:hover {
+  background-color: #800000;
+}
+
+/* Right Side Map */
+.right-map-side iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================================= */
+/* MOBILE RESPONSIVENESS                     */
+/* ========================================= */
+@media (max-width: 900px) {
+  /* Phone-il thazhekku thazhekku varan */
+  .contact-split-section {
+    flex-direction: column; 
+    height: auto;
+  }
+  
+  /* Randu section-um 100% width aakkunnu */
+  .split-half {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .form-wrapper {
+    padding: 0 20px; /* Phone-il side space kurakkunnu */
+  }
+}
+
+
+/* footer */
+
+/* ========================================= */
+/* NEW FOOTER SECTION CSS                    */
+/* ========================================= */
+.my-custom-footer {
+  background-color: #030303 !important; 
+  color: #cccccc !important; 
+  padding: 80px 20px 60px 20px !important; 
+  font-family: Arial, sans-serif !important;
+  width: 100% !important;
+  clear: both !important;
+}
+
+/* Forces the 4 columns to stay in a row on Desktop */
+.my-footer-row {
+  display: flex !important;
+  flex-direction: row !important; 
+  justify-content: space-between !important; 
+  flex-wrap: wrap !important; 
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  gap: 30px !important;
+}
+
+.my-footer-col {
+  flex: 1 !important;
+  min-width: 200px !important; 
+}
+
+.my-about-col, .my-contact-col {
+  flex: 1.2 !important; 
+}
+
+.my-footer-title {
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  margin-bottom: 35px !important; 
+  display: block !important;
+}
+
+.my-footer-text {
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  color: #d3d3d3 !important; 
+}
+
+/* Forces the Links to stack vertically */
+.my-footer-list {
+  list-style: none !important; 
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important; 
+  flex-direction: column !important; 
+  gap: 12px !important; /* Space between links */
+}
+
+.my-footer-list li {
+  display: block !important; 
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.my-footer-list a {
+  color: #d3d3d3 !important;
+  text-decoration: none !important; 
+  font-size: 1.05rem !important;
+  transition: color 0.3s ease !important;
+  display: block !important;
+}
+
+.my-footer-list a:hover {
+  color: #ffffff !important; 
+}
+
+/* Mobile Devices */
+@media (max-width: 900px) {
+  .my-footer-row {
+    flex-direction: column !important; 
+    gap: 40px !important;
+  }
+}
